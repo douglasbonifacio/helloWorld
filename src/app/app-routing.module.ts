@@ -11,6 +11,27 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'ofertas',
+    loadChildren: () => import('./promocoes/promocoes.module').then( m => m.PromocoesPageModule)
+  },
+  {
+    path: 'carros-importados',
+    loadChildren: () => import('./carros-importados/carros-importados.module').then( m => m.CarrosImportadosPageModule)
+  },
+  {
+    path: 'carros-nacionais',
+    loadChildren: () => import('./carros-nacionais/carros-nacionais.module').then( m => m.CarrosNacionaisPageModule)
+  },
+  {
+    path: 'motos-harley',
+    loadChildren: () => import('./motos-harley/motos-harley.module').then( m => m.MotosHarleyPageModule)
+  },
+  {
+    path: 'motos-yamaha',
+    loadChildren: () => import('./motos-yamaha/motos-yamaha.module').then( m => m.MotosYamahaPageModule)
+  },
+
 ];
 
 @NgModule({
