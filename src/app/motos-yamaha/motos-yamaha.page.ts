@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BdtempService } from '../services/bdtemp.service';
 
 @Component({
   selector: 'app-motos-yamaha',
@@ -15,9 +16,13 @@ export class MotosYamahaPage implements OnInit {
     {nome: "Motos Yamaha TRAIL CROSSER", descricao: "Cor Verde", valor: 6600}
   ];
 
-  constructor() { }
+  constructor(public bdtemp: BdtempService) { }
 
   ngOnInit() {
+  }
+
+  addProdutoCarrinho(produto: any){
+    this.bdtemp.addProdutoCarrinho(produto);
   }
 
 }
