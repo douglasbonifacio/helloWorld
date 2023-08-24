@@ -3,7 +3,17 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
+
     <ion-title>motos-yamaha</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrinho">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-badge color="warning">{{qtdeItensCarrinho}}</ion-badge>
+      </ion-button>
+
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
@@ -13,7 +23,7 @@
 
   <ion-item lines="full" *ngFor="let produto of listaProdutos">
     <ion-thumbnail slot="start">
-      <img src="https://www.yamaha-motor.com.br/file/v4498663521502965656/products/lateral-mtseries-mt09-321-abs-30086-fx01-img-01-v01-desktop.jpg"/>
+      <img [src]="produto.foto" />
     </ion-thumbnail>
     <ion-label>
       <h2>{{produto.nome | uppercase}}</h2>

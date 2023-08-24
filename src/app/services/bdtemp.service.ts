@@ -43,7 +43,7 @@ export class BdtempService {
       //Adiciona o produto no final do vetor do carrinho
       this.bd['carrinho'].push(produto);
 
-      console.log("Carrinho: ", this.bd['carrinho']);
+      this.totalCarrinho();
 
       return true;
     }
@@ -52,9 +52,27 @@ export class BdtempService {
   removeProdutoCarrinho(posicao: number){
     //Remove 1 elemento na posição passada
     this.bd['carrinho'].splice(posicao, 1);
+
+    this.totalCarrinho();
     return true;
   }
   limparCarrinho(){
     this.bd['carrinho'] = [];
+
+    this.totalCarrinho();
   }
+
+    totalCarrinho(){
+        //cria a variavel de total
+      let total = 0;
+        //verifica se o carrinho tem itens
+      if(this.bd['carrinho'].length > 0){
+
+        for(let prod of this.bd['carrinho']){
+          total = total + prod.valor;
+        }
+      }
+      this.salvar('qtdeItensCarrinho', this.bd['carrinho'].length)
+      this.salvar('totalCarrinho', total);
+    }
 }

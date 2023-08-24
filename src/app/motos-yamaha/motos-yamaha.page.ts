@@ -8,12 +8,14 @@ import { BdtempService } from '../services/bdtemp.service';
 })
 export class MotosYamahaPage implements OnInit {
 
+  qtdeItensCarrinho = 0
+
   listaProdutos = [
-    {img1: "https://www.yamaha-motor.com.br/file/v4498663521502965656/products/lateral-mtseries-mt09-321-abs-30086-fx01-img-01-v01-desktop.jpg", nome: "Motos Yamaha MT09", descricao: "Cor Preta", valor: 6000},
-    {img2: "https://cdn.awsli.com.br/600x450/764/764193/produto/36448661/c0e5984615.jpg", nome: "Motos Yamaha FAZER", descricao: "Cor Vermelho", valor: 6500},
-    {nome: "Motos Yamaha FACTOR 125", descricao: "Cor Azul", valor: 6100},
-    {nome: "Motos Yamaha SUPERSPORT R15", descricao: "Cor Laranja", valor: 6300},
-    {nome: "Motos Yamaha TRAIL CROSSER", descricao: "Cor Verde", valor: 6600}
+    {nome: "Moto Yamaha MT09", descricao: "Cor Preta", valor: 6000, foto: 'https://cdn.motor1.com/images/mgl/NvbmX/s1/yamaha-mt-09-2020.webp'},
+    {nome: "Moto Yamaha FAZER", descricao: "Cor Preta", valor: 6500, foto: 'https://www.yamaha-motor.com.br/file/v1552257033840217422/products/478.faixa3.detalhe.mobile.jpg'},
+    {nome: "Moto Yamaha FACTOR 125", descricao: "Cor Vermelha", valor: 6100, foto:'https://motos2024.com.br/wp-content/uploads/2023/02/Yamaha-Factor-125-2024-Precos-mudancas-consumo-e-lancamento-1200x675-1-1200x900.jpg'},
+    {nome: "Moto Yamaha SUPERSPORT R15", descricao: "Cor Azul", valor: 6300, foto:'https://mobilidade.estadao.com.br/wp-content/uploads/2023/06/Nova-Yamaha-R15.jpg'},
+    {nome: "Moto Yamaha TRAIL CROSSER", descricao: "Cor Azul", valor: 6600, foto:'https://i0.statig.com.br/bancodeimagens/3u/rt/0p/3urt0pijihi93cfqpkzp5f8rq.jpg'}
   ];
 
   constructor(public bdtemp: BdtempService) { }
@@ -23,6 +25,13 @@ export class MotosYamahaPage implements OnInit {
 
   addProdutoCarrinho(produto: any){
     this.bdtemp.addProdutoCarrinho(produto);
+
+    this.buscarDadosCarrinho();
+  }
+
+  buscarDadosCarrinho(){
+    this.qtdeItensCarrinho = this.bdtemp.buscar('qtdeItensCarrinho')
+
   }
 
 }

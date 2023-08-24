@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'motos-yamaha',
     loadChildren: () => import('./motos-yamaha/motos-yamaha.module').then( m => m.MotosYamahaPageModule)
+  },  {
+    path: 'carrinho',
+    loadChildren: () => import('./carrinho/carrinho.module').then( m => m.CarrinhoPageModule)
   },
+
 
 ];
 
