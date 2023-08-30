@@ -11,11 +11,11 @@ export class MotosHarleyPage implements OnInit {
   qtdeItensCarrinho = 0
 
   listaProdutos = [
-    {nome: "Moto Yamaha MT09", descricao: "Cor Preta", valor: 6000, foto: 'https://cdn.motor1.com/images/mgl/NvbmX/s1/yamaha-mt-09-2020.webp'},
-    {nome: "Moto Yamaha FAZER", descricao: "Cor Preta", valor: 6500, foto: 'https://www.yamaha-motor.com.br/file/v1552257033840217422/products/478.faixa3.detalhe.mobile.jpg'},
-    {nome: "Moto Yamaha FACTOR 125", descricao: "Cor Vermelha", valor: 6100, foto:'https://motos2024.com.br/wp-content/uploads/2023/02/Yamaha-Factor-125-2024-Precos-mudancas-consumo-e-lancamento-1200x675-1-1200x900.jpg'},
-    {nome: "Moto Yamaha SUPERSPORT R15", descricao: "Cor Azul", valor: 6300, foto:'https://mobilidade.estadao.com.br/wp-content/uploads/2023/06/Nova-Yamaha-R15.jpg'},
-    {nome: "Moto Yamaha TRAIL CROSSER", descricao: "Cor Azul", valor: 6600, foto:'https://i0.statig.com.br/bancodeimagens/3u/rt/0p/3urt0pijihi93cfqpkzp5f8rq.jpg'}
+    {nome: "Moto Harley Davidson Sportste", descricao: "Cor Branca", valor: 86000, foto: 'https://www.revistafullpower.com.br/wp-content/uploads/2022/05/2021-harley-davidson-sportster-s-1.webp'},
+    {nome: "Moto Harley Davidson Luxembourg", descricao: "Cor Azul", valor: 99500, foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRPFex3dEQvzKkViVHUfEIaxZopWqDLGEoBQTKAUDMN55cx0Bod0fHDiukaR7wpx9NRc&usqp=CAU'},
+    {nome: "Moto Harley Davidson Nigth Road", descricao: "Cor Branco", valor: 100000, foto:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqsELKVEpIX48n15WCYCoqKdMntoWJjOutQA&usqp=CAU'},
+    {nome: "Moto Harley Davidson CVO", descricao: "Cor Preto", valor: 68000, foto:'https://www.chavesnamao.com.br/imn/0600x0400/A/veiculos/101296/2329941/harley-davidson-cvo-breakout-fxsbse_f4e9f379e13.jpeg'},
+    {nome: "Moto Harley Davidson Chopper", descricao: "Cor Prata", valor: 100000, foto:'https://i.pinimg.com/736x/01/33/a6/0133a66c9b92d0dd08867baaeab5c51b--moto-harley-yahoo.jpg'}
   ];
 
   constructor(public bdtemp: BdtempService) { }

@@ -16,10 +16,12 @@ export class CarrinhoPage implements OnInit {
 
   ngOnInit() {
     this.calcularCarrinho();
+
   }
 
   buscarItensCarrinho() {
     this.listaProdutos = this.bdtemp.buscar('carrinho');
+
     this.calcularCarrinho();
   }
 
@@ -44,5 +46,8 @@ export class CarrinhoPage implements OnInit {
   limparCarrinho() {
     this.bdtemp.limparCarrinho();
     this.buscarItensCarrinho();
+  }
+  finalizarCompra() {
+
   }
 }

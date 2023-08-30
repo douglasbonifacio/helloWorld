@@ -11,10 +11,10 @@ export class CarrosImportadosPage implements OnInit {
 
   listaProdutos = [
     {nome: "Carro Mercedes CLE", descricao: "Cor Chumbo", valor: 450000, foto: 'https://quatrorodas.abril.com.br/wp-content/uploads/2023/07/mercedes-benz_cle-klasse_amg_lin-1-e1688585989690.jpg?quality=70&strip=info&w=1280&h=720&crop=1'},
-    {nome: "Moto Yamaha FAZER", descricao: "Cor Preta", valor: 6500, foto: 'https://www.yamaha-motor.com.br/file/v1552257033840217422/products/478.faixa3.detalhe.mobile.jpg'},
-    {nome: "Moto Yamaha FACTOR 125", descricao: "Cor Vermelha", valor: 6100, foto:'https://motos2024.com.br/wp-content/uploads/2023/02/Yamaha-Factor-125-2024-Precos-mudancas-consumo-e-lancamento-1200x675-1-1200x900.jpg'},
-    {nome: "Moto Yamaha SUPERSPORT R15", descricao: "Cor Azul", valor: 6300, foto:'https://mobilidade.estadao.com.br/wp-content/uploads/2023/06/Nova-Yamaha-R15.jpg'},
-    {nome: "Moto Yamaha TRAIL CROSSER", descricao: "Cor Azul", valor: 6600, foto:'https://i0.statig.com.br/bancodeimagens/3u/rt/0p/3urt0pijihi93cfqpkzp5f8rq.jpg'}
+    {nome: "Carro Rolls Royce Drak", descricao: "Cor Preta", valor: 980000, foto: 'https://cdn.autopapo.com.br/box/uploads/2021/05/03193923/drake-rolls-royce-cullinan-1-1920x1080.jpg'},
+    {nome: "Carro Mustang GT", descricao: "Cor Azul", valor: 300000, foto:'https://cdn.motor1.com/images/mgl/mMPmzP/s1/2024-ford-mustang-gt-exterior-front-quarter.webp'},
+    {nome: "Carro BMW X6", descricao: "Cor Vermelho", valor: 900000, foto:'https://cdn.motor1.com/images/mgl/ZnM07K/s1/bmw-x6-m-competition-teste-br.jpg'},
+    {nome: "Carro Mercedes AMG", descricao: "Cor Chumbo", valor: 660000, foto:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZGsOfZJfOFHpe4OU1m4oNeTc10IhoMMxtSA&usqp=CAU'}
   ];
 
   constructor(public bdtemp: BdtempService) { }
